@@ -45,10 +45,12 @@ Other settings that can be modified include prefix of output file name (this wil
 If you would like to replicate our results on the full dataset:
 1. Download the file "GenomeCRISPR_full05112017.csv.gz" from http://www.dkfz.de/signaling/crispr-downloads/GENOMECRISPR/, unzip and place in /data directory
 2. Uncomment the corresponding lines in data_preprocess.ipynb:
-- data= pd.read_csv('data/GenomeCRISPR_full05112017.csv')
-- outfile_prefix = 'PubMed1'   (or outfile_prefix = 'PubMed2')
-- pubmedid = 29083409 (or pubmedid = 26780180)
-- data = data[data['pubmed'] ==pubmedid]
+```
+data= pd.read_csv('data/GenomeCRISPR_full05112017.csv')
+outfile_prefix = 'PubMed1'   (or outfile_prefix = 'PubMed2')
+pubmedid = 29083409 (or pubmedid = 26780180)
+data = data[data['pubmed'] ==pubmedid]
+```
 
 The output of running this script are 2-6 pickle files storing the data and labels for training, validation, and testing sets (depending on the breakdown).
 
