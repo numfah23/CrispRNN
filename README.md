@@ -1,7 +1,7 @@
 # CrispRNN
 Computational Genomics (COMS 4761) Project: CrispRNN: Predicting CRISPR sgRNA effect
 
-CrisprRNN is a bidirectional Recurrent Neural Net-work (RNN) with long short-term memory units (LSTM) built user Tensorflow to predict on-target effect of sgRNAs in CRISPR-Cas9 using sequence information.
+CrisprRNN is a bidirectional Recurrent Neural Network (RNN) with long short-term memory units (LSTM) built using Tensorflow to predict on-target effect of sgRNAs in CRISPR-Cas9 using sequence information.
 
 
 ## Prerequisites
@@ -16,7 +16,7 @@ pip install tensorflow-gpu
 ```
 For more details about TensorFlow installation, see the [Tensorflow Installation Guide](https://www.tensorflow.org/install/)
 
-The other libraries can also be installed using pip:
+The other dependencies can also be installed using pip:
 ```
 pip install jupyter
 pip install numpy
@@ -31,7 +31,7 @@ To download and run our code, clone this repository:
 ```
 git clone https://github.com/numfah23/CrispRNN
 ```
-The code is contained in the following 2 files: final_data_preprocess.ipynb and final_biRNN.ipynb.
+The code is contained in the following 2 files: final_data_preprocess.ipynb and final_biRNN.ipynb. (TODO: rename these files?)
 
 
 # Test-run on sample inputs
