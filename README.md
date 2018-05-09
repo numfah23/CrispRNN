@@ -42,7 +42,13 @@ The input to this notebook is a csv file containing at least 2 columns with name
 
 Other settings that can be modified include prefix of output file name (this will be used in the next step), percent breakdown for training, validation, and testing set, and type of model ('regression' or 'classification').
 
-If you would like to replicate our results on the full dataset:
+The output of running this script is 2-6 pickle files storing the data and labels for training, validation, and testing sets (depending on the breakdown).
+
+We have provided a sample input file (data/samplePubMed1.csv) that can be run in this step. With the default settings and this input file, the script will create 6 pickle files (data and labels for training, validation, and testing sets) that can be used for training or testing the model.
+
+An additional sample input file (data/samplePubMed2.csv) is provided to simulate an independent test set. In conjunction with the uncommented line "n_train, n_val, n_test = 0, 0, 1", the script will generate a test set of pickle files from this input file (or another input file, if desired).
+
+In order to replicate our results on the full dataset:
 1. Download the file "GenomeCRISPR_full05112017.csv.gz" from http://www.dkfz.de/signaling/crispr-downloads/GENOMECRISPR/, unzip and place in /data directory
 2. Uncomment the corresponding lines in data_preprocess.ipynb:
 ```
@@ -51,10 +57,6 @@ outfile_prefix = 'PubMed1'   (or outfile_prefix = 'PubMed2')
 pubmedid = 29083409 (or pubmedid = 26780180)
 data = data[data['pubmed'] ==pubmedid]
 ```
-
-The output of running this script is 2-6 pickle files storing the data and labels for training, validation, and testing sets (depending on the breakdown).
-
-We have provided sample inputs (data/samplePubMed1.csv) that can be run in this step. With the default settings and this input file, the script should output 6 pickle files (data and labels for training, validation, and testing sets).
 
 ## Training the RNN model
 Model training can be done in the top section of the CrispRNN.ipynb Jupyter notebook.
