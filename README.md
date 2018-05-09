@@ -52,13 +52,13 @@ pubmedid = 29083409 (or pubmedid = 26780180)
 data = data[data['pubmed'] ==pubmedid]
 ```
 
-The output of running this script are 2-6 pickle files storing the data and labels for training, validation, and testing sets (depending on the breakdown).
+The output of running this script is 2-6 pickle files storing the data and labels for training, validation, and testing sets (depending on the breakdown).
 
 We have provided sample inputs (data/samplePubMed1.csv) that can be run in this step. With the default settings and this input file, the script should output 6 pickle files (data and labels for training, validation, and testing sets).
 
 ## Training the RNN model
 Model training can be done in the top section of the CrispRNN.ipynb Jupyter notebook.
-The input to this notebook are pickle files created in the previous step. The prefix of the file names must be specified inside the notebook.
+The input to this notebook is pickle files created in the previous step. The prefix of the file names must be specified inside the notebook.
 
 Model parameters that can be modified include the type of model ('regression' or 'classification'), learning rate, training steps, display step, number of hidden layers in the LSTM cell, intermediate activation functions in the LSTM cell, and model name to save the trained model as.
 
@@ -72,7 +72,7 @@ We have provided two pre-trained models (one for regression and one for classifi
 
 
 ## Predicting and visualizing on-target effects
-Predictions can be made for both validation and test data sets in the corresponding sections of the CrispRNN.ipynb Jupyter notebook (see headers on where each part are). Note that the first block of code specifying inputs must be run before scrolling down to prediction sections. Either the trained model on the sample subset data provided or the pre-trained model can be used for predictions. The prefix for pickle files for prediction and the model name should be specified inside the notebook.
+Predictions can be made for both validation and test data sets in the corresponding sections of the CrispRNN.ipynb Jupyter notebook (see headers indicating each part). Note that the first block of code specifying inputs must be run before scrolling down to prediction sections. Either the trained model on the sample subset data provided or the pre-trained model can be used for predictions. The prefix for pickle files for prediction and the model name should be specified inside the notebook.
 
 For both the validation and test set, code is provided to create scatter plots of the predicted effect vs the actual effect, report Spearman correlations, and output csv files for the predictions.
 
