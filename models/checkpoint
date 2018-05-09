@@ -1,2 +1,2 @@
-model_checkpoint_path: "model_r_10m.ckpt"
-all_model_checkpoint_paths: "model_r_10m.ckpt"
+model_checkpoint_path: "model_sample_input.ckpt"
+all_model_checkpoint_paths: "model_sample_input.ckpt"
